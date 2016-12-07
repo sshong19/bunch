@@ -1,5 +1,0 @@
-<resources>
-    <string name="app_name">"bunch"</string>
-    <string name = "facebook_app_id"> 264497493953437</string>
-    <string name="fb_login_protocol_scheme">fb264497493953437</string>
-</resources>
