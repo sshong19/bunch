@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "655055095046",
+    "firebase_url": "https://bunch-f1fac.firebaseio.com",
+    "project_id": "bunch-f1fac",
+    "storage_bucket": "bunch-f1fac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:655055095046:android:60a523a6f5d02da8",
+        "android_client_info": {
+          "package_name": "com.appsco.bunch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "655055095046-juslsc01bc4qsca92q95uvamfo1fpv04.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAYodHQyQD1RayO4TU5vZpQrqiG4U3ivg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
