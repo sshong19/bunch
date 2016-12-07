@@ -10,7 +10,20 @@
     tools:context="com.appsco.bunch.MainActivity">
 
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:id = "@+id/textView"
+        android:gravity="center"
+        android:textStyle = "bold"
+        />
+
+
+    <com.facebook.login.widget.LoginButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+        android:id = "@+id/fb_login_bn"
+        android:layout_centerInParent="true"></com.facebook.login.widget.LoginButton>
+
+
+    </RelativeLayout>
