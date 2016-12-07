@@ -12,9 +12,7 @@ import com.facebook.FacebookSdk;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 
-import org.w3c.dom.Text;
-
-public class MainActivity extends AppCompatActivity {
+public class MainLogin extends AppCompatActivity {
 
     LoginButton loginButton;
     TextView textView;
@@ -24,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
         loginButton = (LoginButton)findViewById(R.id.fb_login_bn);
         textView = (TextView)findViewById(R.id.textView);
         callbackManager = CallbackManager.Factory.create();

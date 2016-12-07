@@ -7,23 +7,35 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.appsco.bunch.MainActivity">
+    tools:context="com.appsco.bunch.MainLogin">
+
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/bunchlogo"
+        android:id="@+id/imageView"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="28dp"
         android:id = "@+id/textView"
         android:gravity="center"
         android:textStyle = "bold"
-        />
-
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
 
     <com.facebook.login.widget.LoginButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id = "@+id/fb_login_bn"
-        android:layout_centerInParent="true"></com.facebook.login.widget.LoginButton>
+        android:layout_marginTop="61dp"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"></com.facebook.login.widget.LoginButton>
 
 
-    </RelativeLayout>
+</RelativeLayout>
