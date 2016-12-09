@@ -1,6 +1,7 @@
 package com.appsco.bunch;
 
 import android.content.Intent;
+import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -37,6 +38,11 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             startActivity(new Intent(this,LoginActivity.class));
         }
 
+        if (databaseReference.getDatabase() != null){
+            finish();
+            startActivity(new Intent(this,PostActivity.class));
+        }
+
         FirebaseUser user = firebaseAuth.getCurrentUser();
 
         textViewUserEmail = (TextView) findViewById(R.id.textViewUserEmail);
@@ -63,8 +69,11 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
         UserInformation userInformation  = new UserInformation(firstName,lastName);
 
+        //gets the unique id of the current user
         FirebaseUser user = firebaseAuth.getCurrentUser();
-        databaseReference.child(user.getUid()).setValue(userInformation);
+
+        //saves the information of the users into the child, "Users"
+        databaseReference.child("Users").child(user.getUid()).setValue(userInformation);
 
         Toast.makeText(this,"Information Saved...",Toast.LENGTH_LONG).show();
 
@@ -81,6 +90,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         }
         if (v == buttonSave){
             saveUserInformation();
+            startActivity(new Intent(this,PostActivity.class));
         }
     }
 }

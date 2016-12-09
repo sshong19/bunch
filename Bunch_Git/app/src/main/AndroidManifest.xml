@@ -23,7 +23,8 @@
             android:value="@string/facebook_app_id" />
 
         <activity android:name=".LoginActivity" />
-        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".PostActivity"></activity>
     </application>
 
 </manifest>
