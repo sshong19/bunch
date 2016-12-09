@@ -27,11 +27,11 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    LoginButton loginButton;
-    TextView textView;
-    CallbackManager callbackManager;
-    ProfileTracker profileTracker;
-//    email login is not funcitonal yet
+    //facebook login is not implemented
+//    LoginButton loginButton;
+//    TextView textView;
+//    CallbackManager callbackManager;
+//    ProfileTracker profileTracker;
     private Button buttonRegister;
     private EditText editTextEmail;
     private EditText editTextPassword;
@@ -42,59 +42,67 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        FacebookSdk.sdkInitialize(getApplicationContext());
+//        FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_main);
         firebaseAuth = FirebaseAuth.getInstance();
+
+        //if the user is already registered the user would be directed to profile activity
+        if (firebaseAuth.getCurrentUser() != null){
+            //profile activity here
+            finish();
+            startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+        }
+
         progressDialog = new ProgressDialog(this);
-        loginButton = (LoginButton)findViewById(R.id.fb_login_bn);
+//        loginButton = (LoginButton)findViewById(R.id.fb_login_bn);
         buttonRegister = (Button) findViewById(R.id.buttonRegister);
         editTextEmail = (EditText)findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextPassWord);
         textViewSignin = (TextView) findViewById(R.id.textViewSignin);
-        textView = (TextView)findViewById(R.id.textView);
+//        textView = (TextView)findViewById(R.id.textView);
         buttonRegister.setOnClickListener(this);
         textViewSignin.setOnClickListener(this);
-        callbackManager = CallbackManager.Factory.create();
-        profileTracker = new ProfileTracker() {
-            @Override
-            protected void onCurrentProfileChanged(
-                    Profile oldProfile,
-                    Profile currentProfile
-            ){
-                String firstName = currentProfile.getFirstName();
-                String lastName = currentProfile.getLastName();
-                currentProfile.getProfilePictureUri(40,30);
-            }
-        };
-        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
-            @Override
-            public void onSuccess(LoginResult loginResult) {
-                finish();
-                startActivity(new Intent(getApplicationContext(),ProfileActivity.class));
-            }
-
-            @Override
-            public void onCancel() {
-
-            }
-
-            @Override
-            public void onError(FacebookException error) {
-
-            }
-        });
+//        callbackManager = CallbackManager.Factory.create();
+//        profileTracker = new ProfileTracker() {
+//            @Override
+//            protected void onCurrentProfileChanged(
+//                    Profile oldProfile,
+//                    Profile currentProfile
+//            ){
+//                String firstName = currentProfile.getFirstName();
+//                String lastName = currentProfile.getLastName();
+//                currentProfile.getProfilePictureUri(40,30);
+//            }
+//        };
+//        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+//            @Override
+//            public void onSuccess(LoginResult loginResult) {
+//                finish();
+//                startActivity(new Intent(getApplicationContext(),ProfileActivity.class));
+//            }
+//
+//            @Override
+//            public void onCancel() {
+//
+//            }
+//
+//            @Override
+//            public void onError(FacebookException error) {
+//
+//            }
+//        });
     }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        callbackManager.onActivityResult(requestCode,resultCode,data);
-    }
-
-    @Override
-    public void onDestroy(){
-        super.onDestroy();
-        profileTracker.stopTracking();
-    }
+//
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        callbackManager.onActivityResult(requestCode,resultCode,data);
+//    }
+//
+//    @Override
+//    public void onDestroy(){
+//        super.onDestroy();
+//        profileTracker.stopTracking();
+//    }
 
     private void registerUser (){
         String email = editTextEmail.getText().toString().trim();
@@ -102,17 +110,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (TextUtils.isEmpty(email)){
             //email is empty
-            Toast.makeText(this,"Please enter email",Toast.LENGTH_SHORT);
+            Toast.makeText(this,"Please enter email",Toast.LENGTH_SHORT).show();
             //stopping the function execution
-            return;
         }
 
         if (TextUtils.isEmpty(password)){
             //password is empty
-            Toast.makeText(this,"Please enter password",Toast.LENGTH_SHORT);
+            Toast.makeText(this,"Please enter password",Toast.LENGTH_SHORT).show();
             //stopping the function execution
-            return;
         }
+
         //if validation are ok
         progressDialog.setMessage("Registering User...");
         progressDialog.show();
@@ -125,12 +132,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             //user is successfully
                             // we will start the profile activity here
                             //right now lets display a toast only
+                            finish();
+                            startActivity(new Intent(getApplicationContext(),ProfileActivity.class));
                             Toast.makeText(MainActivity.this,"Registered Successfully",Toast.LENGTH_SHORT).show();
-                            progressDialog.dismiss();
                         } else {
                             Toast.makeText(MainActivity.this,"Failed to Register...Please Try Again...",Toast.LENGTH_SHORT).show();
-                            progressDialog.dismiss();
                         }
+                        progressDialog.dismiss();
                     }
                 });
     }
@@ -139,8 +147,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         if (v == buttonRegister){
             registerUser();
+            startActivity(new Intent(this,ProfileActivity.class));
         }
         if (v == textViewSignin){
+         //Signin
             startActivity(new Intent(this,LoginActivity.class));
         }
     }

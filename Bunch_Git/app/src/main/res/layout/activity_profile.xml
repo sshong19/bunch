@@ -10,4 +10,54 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.appsco.bunch.ProfileActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:id="@+id/textViewUserEmail"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:id="@+id/editFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your First Name"
+            android:layout_below ="@id/textViewUserEmail"/>
+
+        <EditText
+            android:id="@+id/editLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your Last Name"
+            android:layout_below = "@id/editFirstName"/>
+
+        <Button
+            android:id = "@+id/buttonSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text = "Save Information"
+            android:layout_below = "@id/editFirstName"/>
+
+
+        <Button
+            android:text="Logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/buttonLogout"
+            android:layout_gravity="center"
+            android:layout_below="@id/buttonSave"
+            />
+
+    </LinearLayout>
 </RelativeLayout>
