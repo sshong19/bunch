@@ -38,10 +38,10 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             startActivity(new Intent(this,LoginActivity.class));
         }
 
-        if (databaseReference.getDatabase() != null){
-            finish();
-            startActivity(new Intent(this,PostActivity.class));
-        }
+//        if (databaseReference.getDatabase() != null){
+//            finish();
+//            startActivity(new Intent(this,PostActivity.class));
+//        }
 
         FirebaseUser user = firebaseAuth.getCurrentUser();
 
@@ -90,7 +90,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         }
         if (v == buttonSave){
             saveUserInformation();
-            startActivity(new Intent(this,PostActivity.class));
+//            startActivity(new Intent(this,PostActivity.class));
         }
     }
 }
