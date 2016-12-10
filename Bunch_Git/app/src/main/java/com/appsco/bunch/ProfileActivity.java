@@ -73,6 +73,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         //saves the information of the users into the child, "Users"
         databaseReference.child("Users").child(user.getUid()).child("Profile").setValue(userInformation);
 
+
         Toast.makeText(this,"Information Saved...",Toast.LENGTH_LONG).show();
 
     }
@@ -88,7 +89,8 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         }
         if (v == buttonSave){
             saveUserInformation();
-//            startActivity(new Intent(this,PostActivity.class));
+            startActivity(new Intent(this,PostActivity.class));
+
         }
     }
 }
