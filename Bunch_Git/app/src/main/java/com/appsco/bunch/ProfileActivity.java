@@ -96,8 +96,8 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         }
         if (v == buttonSave){
             saveUserInformation();
-            finish();
-            startActivity(new Intent(this,PostActivity.class));
+//            finish();
+//            startActivity(new Intent(this,PostActivity.class));
 //            startActivity(new Intent(this,ProfileThread.class));
 
         }

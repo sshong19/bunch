@@ -95,7 +95,7 @@ public class PostActivity extends AppCompatActivity implements View.OnClickListe
         mLastName = FirebaseDatabase.getInstance().getReference().child("Users").child(myUser.getUid()).child("Profile").child("lastName");
 
         String email = myUser.getEmail();
-        
+
 
         studyGroup myStudyGroup  = new studyGroup(email, intensity, studyClass, maxPeople, date, startTime);
         databaseReference.child("StudyGroups").child("Group "+ myUser.getUid()).setValue(myStudyGroup);
