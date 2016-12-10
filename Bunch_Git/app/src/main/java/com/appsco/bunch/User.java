@@ -20,12 +20,13 @@ public class User {
 
 
     // USER CONSTRUCTORS
-    public User(){
-    }
+    public User(){}
+
     public User(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
+
     public User(String firstName, String lastName, String college, String major, String year){
         this.firstName = firstName;
         this.lastName = lastName;

@@ -13,7 +13,7 @@ import java.util.List;
  */
 
 public class studyGroup {
-    public FirebaseUser Creator;
+    public String Creator;
 //    public Calendar startTime;
 //    public Calendar endTime;
     public String startTime;
@@ -114,7 +114,7 @@ public class studyGroup {
 
     //temporary Study Group object constructor
 
-    public studyGroup(FirebaseUser creator, float intensity, String classStudying, String maxMembers, String date, String time) {
+    public studyGroup(String creator, float intensity, String classStudying, String maxMembers, String date, String time) {
         // Constructor with ALL details filled out
         this.Creator = creator;
         this.startDate = date;
@@ -125,7 +125,7 @@ public class studyGroup {
     }
 
 
-    public boolean addMember(FirebaseUser newMember){
+    public boolean addMember(String newMember){
         // Returns true if member added, returns false if group full
         if (groupMembers.size() < Integer.valueOf(maxMembers)){
             groupMembers.add(newMember);
@@ -137,7 +137,7 @@ public class studyGroup {
         }
     }
 
-    public boolean removeMember(FirebaseUser leavingMember){
+    public boolean removeMember(String leavingMember){
         if(groupMembers.contains(leavingMember)){
             groupMembers.remove(leavingMember);
             return true;

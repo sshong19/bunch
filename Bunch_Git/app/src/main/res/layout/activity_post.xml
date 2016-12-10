@@ -38,9 +38,6 @@
         android:layout_marginTop="11dp"
         android:id="@+id/editDate"
         android:hint="MM/DD/YY"
-        android:onClick="showDatePickerDialog"
-        android:editable="true"
-        android:autoText="false"
         android:layout_below="@+id/when"
         android:layout_toEndOf="@+id/where"
         style="@android:style/Widget.Holo.Light.Spinner" />
@@ -80,7 +77,6 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
         android:ems="10"
         android:layout_marginTop="16dp"
         android:id="@+id/editClass"

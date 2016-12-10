@@ -23,7 +23,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
     private DatabaseReference databaseReference;
 
-    private EditText editFirstName, editLastName;
+    private EditText editFirstName, editLastName, editCollege, editMajor, editYear;
     private Button buttonSave;
 
     @Override
@@ -45,12 +45,16 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 //        }
 
         textViewUserEmail = (TextView) findViewById(R.id.textViewUserEmail);
-        textViewUserEmail.setText("Welcome "+user.getEmail());
+        textViewUserEmail.setText("Welcome "+ user.getEmail());
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
 
         editFirstName = (EditText) findViewById(R.id.editFirstName);
         editLastName = (EditText) findViewById(R.id.editLastName);
+        editCollege = (EditText) findViewById(R.id.editCollege);
+        editMajor = (EditText) findViewById(R.id.editMajor);
+        editYear = (EditText) findViewById(R.id.editYear);
+
         buttonSave = (Button) findViewById(R.id.buttonSave);
 
         buttonLogout = (Button) findViewById(R.id.buttonLogout);
@@ -65,14 +69,17 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     private void saveUserInformation() {
         String firstName = editFirstName.getText().toString().trim();
         String lastName = editLastName.getText().toString().trim();
-        User userInformation  = new User(firstName,lastName);
+        String college = editCollege.getText().toString().trim();
+        String major = editMajor.getText().toString().trim();
+        String year = editYear.getText().toString().trim();
+
+        User userInformation  = new User(firstName,lastName, college, major, year);
 
         //gets the unique id of the current user
         FirebaseUser user = firebaseAuth.getCurrentUser();
 
         //saves the information of the users into the child, "Users"
         databaseReference.child("Users").child(user.getUid()).child("Profile").setValue(userInformation);
-
 
         Toast.makeText(this,"Information Saved...",Toast.LENGTH_LONG).show();
 
@@ -89,7 +96,9 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         }
         if (v == buttonSave){
             saveUserInformation();
+            finish();
             startActivity(new Intent(this,PostActivity.class));
+//            startActivity(new Intent(this,ProfileThread.class));
 
         }
     }
