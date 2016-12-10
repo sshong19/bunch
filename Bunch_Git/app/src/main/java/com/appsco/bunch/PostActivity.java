@@ -12,9 +12,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RatingBar;
 
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class PostActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -26,11 +31,14 @@ public class PostActivity extends AppCompatActivity implements View.OnClickListe
     private ProgressDialog progressDialog;
     private Button cancelButton;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post);
+
         FirebaseUser user = firebaseAuth.getCurrentUser();
+        firebaseAuth = FirebaseAuth.getInstance();
 
         //looks if the user is done with building profile
         if (databaseReference.child("Users").child(user.getUid()).child("Profile") == null ){
@@ -76,18 +84,19 @@ public class PostActivity extends AppCompatActivity implements View.OnClickListe
         String studyClass = editClass.getText().toString();
         String maxPeople = editMaxPeople.getText().toString();
         String location = editWhere.getText().toString();
-        
-        FirebaseUser user = firebaseAuth.getCurrentUser();
+        FirebaseUser myUser = firebaseAuth.getCurrentUser();
 
-        studyGroup studyGroup = new studyGroup(user,);
+        studyGroup myStudyGroup  = new studyGroup(myUser, intensity, studyClass, maxPeople, date, startTime);
+        databaseReference.child("StudyGroups").child("Group "+ myUser.getUid()).setValue(myStudyGroup);
+
 
     }
 
 
     @Override
     public void onClick(View v) {
-        if (v == editDate){
-
+        if (v == addEvent){
+            addStudyGroupEvent();
         }
     }
 }

@@ -11,11 +11,11 @@ import java.util.Map;
 
 public class User {
 
-    private String firstName;
-    private String lastName;
-    private String college;
-    private String major;
-    private String year;
+    public String firstName;
+    public String lastName;
+    public String college;
+    public String major;
+    public String year;
     public Map coursesTaking = new HashMap();
 
 
