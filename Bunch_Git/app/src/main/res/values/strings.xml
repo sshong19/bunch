@@ -4,5 +4,10 @@
     <string name="register">Register</string>
     <string name="PWhint">Enter your password</string>
     <string name="EmailHint">Enter your email</string>
+    <string name="NameHint">First Name</string>
+    <string name="LNameHint">Last Name</string>
+    <string name="YearHint">Fresh, Soph, Junior, or Senior?</string>
+    <string name="MajorHint">Major</string>
+    <string name="CollegeHint">College</string>
 
 </resources>

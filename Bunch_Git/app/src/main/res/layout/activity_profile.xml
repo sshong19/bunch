@@ -8,14 +8,16 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.appsco.bunch.ProfileActivity">
+    tools:context="com.appsco.bunch.ProfileActivity"
+    android:background="@android:color/background_light">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@android:color/background_light">
 
         <TextView
             android:text="TextView"
@@ -24,61 +26,78 @@
             android:layout_marginTop="11dp"
             android:id="@+id/textViewUserEmail"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center" />
 
         <EditText
             android:id="@+id/editFirstName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter your First Name"
-            android:layout_below ="@id/textViewUserEmail"/>
+            android:hint="@string/NameHint"
+            android:layout_below ="@id/textViewUserEmail"
+            android:layout_marginTop="25dp"
+            android:typeface="normal"
+            android:textColor="@android:color/black" />
 
         <EditText
-        android:id="@+id/editLastName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter your Last Name"
-        android:layout_below = "@id/editFirstName"/>
+            android:id="@+id/editLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/LNameHint"
+            android:layout_below = "@id/editFirstName"
+            android:typeface="normal"
+            android:textColor="@android:color/black" />
 
         <EditText
             android:id="@+id/editCollege"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter your College"
-            android:layout_below = "@id/editCollege"/>
+            android:hint="@string/CollegeHint"
+            android:layout_below = "@id/editCollege"
+            android:typeface="normal"
+            android:textColor="@android:color/black" />
 
         <EditText
             android:id="@+id/editMajor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter your Major"
-            android:layout_below = "@id/editMajor"/>
+            android:hint="@string/MajorHint"
+            android:layout_below = "@id/editMajor"
+            android:typeface="normal" />
 
         <EditText
             android:id="@+id/editYear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Are you a Fresh, Soph, Junior, or Senior?"
-            android:layout_below = "@id/editYear"/>
+            android:hint="@string/YearHint"
+            android:layout_below = "@id/editYear"
+            android:typeface="normal"
+            android:textColor="@android:color/black" />
 
         <Button
             android:id = "@+id/buttonSave"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text = "Save Information"
-            android:layout_below = "@id/editFirstName"/>
+            android:layout_below = "@id/editFirstName"
+            android:layout_marginTop="25dp"
+            android:textColor="@color/colorAccent"
+            android:background="@color/buttonBackground" />
 
 
         <Button
             android:text="Logout"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:id="@+id/buttonLogout"
             android:layout_gravity="center"
             android:layout_below="@id/buttonSave"
-            />
+            android:textColor="@color/colorAccent"
+            android:background="@color/buttonBackground"
+            android:layout_marginTop="10dp" />
 
     </LinearLayout>
+
 </RelativeLayout>
