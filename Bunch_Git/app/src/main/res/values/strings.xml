@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">"Bunch "</string>
     <string name="facebook_app_id">264497493953437</string>
+    <string name="register">Register</string>
+    <string name="PWhint">Enter your password</string>
+    <string name="EmailHint">Enter your email</string>
 
 </resources>
