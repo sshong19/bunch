@@ -1,7 +1,6 @@
 package com.appsco.bunch;
 
 import android.content.Intent;
-import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -67,7 +66,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         String firstName = editFirstName.getText().toString().trim();
         String lastName = editLastName.getText().toString().trim();
 
-        UserInformation userInformation  = new UserInformation(firstName,lastName);
+        User userInformation  = new User(firstName,lastName);
 
         //gets the unique id of the current user
         FirebaseUser user = firebaseAuth.getCurrentUser();
