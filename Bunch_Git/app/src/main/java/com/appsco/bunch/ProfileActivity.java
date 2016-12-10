@@ -1,7 +1,6 @@
 package com.appsco.bunch;
 
 import android.content.Intent;
-import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -38,12 +37,12 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             startActivity(new Intent(this,LoginActivity.class));
         }
 
-//        if (databaseReference.getDatabase() != null){
-//            finish();
-//            startActivity(new Intent(this,PostActivity.class));
-//        }
-
         FirebaseUser user = firebaseAuth.getCurrentUser();
+
+//        if (databaseReference.child("Users").child(user.getUid()).child("Profile") != null){
+//            finish();
+//            startActivity(new Intent(this,UserThread.class));
+//        }
 
         textViewUserEmail = (TextView) findViewById(R.id.textViewUserEmail);
         textViewUserEmail.setText("Welcome "+user.getEmail());
@@ -66,14 +65,13 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     private void saveUserInformation() {
         String firstName = editFirstName.getText().toString().trim();
         String lastName = editLastName.getText().toString().trim();
-
-        UserInformation userInformation  = new UserInformation(firstName,lastName);
+        User userInformation  = new User(firstName,lastName);
 
         //gets the unique id of the current user
         FirebaseUser user = firebaseAuth.getCurrentUser();
 
         //saves the information of the users into the child, "Users"
-        databaseReference.child("Users").child(user.getUid()).setValue(userInformation);
+        databaseReference.child("Users").child(user.getUid()).child("Profile").setValue(userInformation);
 
         Toast.makeText(this,"Information Saved...",Toast.LENGTH_LONG).show();
 

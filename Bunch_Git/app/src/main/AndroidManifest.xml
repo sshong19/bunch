@@ -24,8 +24,7 @@
 
         <activity android:name=".LoginActivity" />
         <activity android:name=".ProfileActivity" />
-        <activity android:name=".PostActivity" />
-        <activity android:name=".NewsFeedActivity"></activity>
+        <activity android:name=".PostActivity"></activity>
     </application>
 
 </manifest>

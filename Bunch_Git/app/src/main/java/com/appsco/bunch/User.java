@@ -9,7 +9,7 @@ import java.util.Map;
  * Created by sshong on 12/8/16.
  */
 
-public class UserInformation {
+public class User {
 
     private String firstName;
     private String lastName;
@@ -20,13 +20,13 @@ public class UserInformation {
 
 
     // USER CONSTRUCTORS
-    public UserInformation(){
+    public User(){
     }
-    public UserInformation(String firstName, String lastName) {
+    public User(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
-    public UserInformation(String firstName, String lastName, String college, String major, String year){
+    public User(String firstName, String lastName, String college, String major, String year){
         this.firstName = firstName;
         this.lastName = lastName;
         this.college = college;
