@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_post"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.appsco.bunch.PostActivity">
+
+
+    <TextView
+        android:text="New Study Group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Header"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="When:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/when"
+        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        android:fontFamily="monospace"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="56dp" />
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:layout_marginTop="11dp"
+        android:id="@+id/editDate"
+        android:hint="MM/DD/YY"
+        android:onClick="showDatePickerDialog"
+        android:editable="true"
+        android:autoText="false"
+        android:layout_below="@+id/when"
+        android:layout_toEndOf="@+id/where"
+        style="@android:style/Widget.Holo.Light.Spinner" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/time"
+        android:hint = "TIME"
+        android:layout_below="@+id/editDate"
+        android:layout_alignStart="@+id/editDate"
+        style="@android:style/Widget.Holo.Spinner" />
+
+    <TextView
+        android:text="Where: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/where"
+        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        android:fontFamily="monospace"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/editDate"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:hint="At where?"
+        android:id="@+id/editWhere"
+        android:layout_below="@+id/where"
+        android:layout_toEndOf="@+id/where" />
+
+    <TextView
+        android:text="Which Class?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/whichClass"
+        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        android:fontFamily="monospace"
+        android:layout_below="@+id/editWhere"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_marginTop="16dp"
+        android:id="@+id/editClass"
+        android:hint="ie. CH100"
+        android:layout_below="@+id/whichClass"
+        android:layout_alignStart="@+id/editWhere" />
+
+    <TextView
+        android:text="Studying Intensity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/studyingIntensity"
+        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        android:fontFamily="monospace"
+        android:layout_below="@+id/editClass"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Maximum People"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/maxPeople"
+        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        android:fontFamily="monospace"
+        android:layout_below="@+id/ratingBar"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:layout_marginTop="13dp"
+        android:id="@+id/editMaxPeople"
+        android:hint="3 - 8 people"
+        android:layout_below="@+id/maxPeople"
+        android:layout_alignStart="@+id/editClass" />
+
+    <Button
+        android:text="Add Study Group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addEvent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:id="@+id/ratingBar"
+        android:layout_below="@+id/studyingIntensity"
+        android:layout_toEndOf="@+id/when" />
+
+    <Button
+        android:text="CANCEL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/cancel" />
+
+
+
+</RelativeLayout>

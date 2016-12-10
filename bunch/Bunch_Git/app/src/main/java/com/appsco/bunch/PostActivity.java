@@ -1,4 +1,3 @@
-/*
 package com.appsco.bunch;
 
 import android.app.DatePickerDialog;
@@ -92,5 +91,3 @@ public class PostActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 }
-*/
-

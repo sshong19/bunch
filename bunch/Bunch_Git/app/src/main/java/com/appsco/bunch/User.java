@@ -11,22 +11,21 @@ import java.util.Map;
 
 public class User {
 
-    public String firstName;
-    public String lastName;
-    public String college;
-    public String major;
-    public String year;
+    private String firstName;
+    private String lastName;
+    private String college;
+    private String major;
+    private String year;
     public Map coursesTaking = new HashMap();
 
 
     // USER CONSTRUCTORS
-    public User(){}
-
+    public User(){
+    }
     public User(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
-
     public User(String firstName, String lastName, String college, String major, String year){
         this.firstName = firstName;
         this.lastName = lastName;
