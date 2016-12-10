@@ -34,11 +34,32 @@
             android:layout_below ="@id/textViewUserEmail"/>
 
         <EditText
-            android:id="@+id/editLastName"
+        android:id="@+id/editLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your Last Name"
+        android:layout_below = "@id/editFirstName"/>
+
+        <EditText
+            android:id="@+id/editCollege"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter your Last Name"
-            android:layout_below = "@id/editFirstName"/>
+            android:hint="Enter your College"
+            android:layout_below = "@id/editCollege"/>
+
+        <EditText
+            android:id="@+id/editMajor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your Major"
+            android:layout_below = "@id/editMajor"/>
+
+        <EditText
+            android:id="@+id/editYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Are you a Fresh, Soph, Junior, or Senior?"
+            android:layout_below = "@id/editYear"/>
 
         <Button
             android:id = "@+id/buttonSave"
