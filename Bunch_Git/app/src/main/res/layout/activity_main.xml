@@ -14,24 +14,15 @@
 
 
     <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         android:src="@drawable/bunchlogo"
         android:id="@+id/imageView"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="28dp"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
         />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:id = "@+id/textView"
-        android:gravity="center"
-        android:textStyle = "bold"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -43,25 +34,40 @@
 
         <EditText
             android:inputType="textEmailAddress"
-            android:hint="Enter your email"
+            android:hint="@string/EmailHint"
             android:id = "@+id/editTextEmail"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            style="@android:style/Widget.Material.Light.EditText"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:background="@android:drawable/edit_text"
+            tools:typeface="normal"
+            android:typeface="normal" />
 
         <EditText
             android:inputType = "textPassword"
-            android:hint="Enter your password"
+            android:hint="@string/PWhint"
             android:id = "@+id/editTextPassWord"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            style="@android:style/Widget.Material.Light.EditText"
+            android:textAlignment="center"
+            android:background="@android:drawable/edit_text"
+            android:textColor="@android:color/black"
+            tools:typeface="normal"
+            android:typeface="normal"
+            tools:textStyle="normal" />
 
 
 
         <Button
             android:id = "@+id/buttonRegister"
-            android:text = "Register User"
+            android:text = "@string/register"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:background="@color/buttonBackground" />
 
 
         <!--<com.facebook.login.widget.LoginButton-->
@@ -77,7 +83,8 @@
             android:textAlignment="center"
             android:text="Already Registerd? Sign in here"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:typeface="sans" />
 
     </LinearLayout>
 

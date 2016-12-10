@@ -12,24 +12,24 @@
 
 
     <TextView
-        android:text="New Study Group"
+        android:text="@string/StudyGroupNew"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/Header"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        android:textColor="@android:color/black" />
 
     <TextView
-        android:text="When:"
+        android:text="@string/When"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/when"
-        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
-        android:fontFamily="monospace"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="56dp" />
+        android:layout_marginTop="30dp"
+        android:textColor="@android:color/black" />
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -40,7 +40,8 @@
         android:hint="MM/DD/YY"
         android:layout_below="@+id/when"
         android:layout_toEndOf="@+id/where"
-        style="@android:style/Widget.Holo.Light.Spinner" />
+        style="@android:style/Widget.Holo.Light.Spinner"
+        android:textColorHint="@color/hintTextColor" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -48,106 +49,111 @@
         android:inputType="time"
         android:ems="10"
         android:id="@+id/time"
-        android:hint = "TIME"
+        android:hint = "@string/Time"
         android:layout_below="@+id/editDate"
         android:layout_alignStart="@+id/editDate"
-        style="@android:style/Widget.Holo.Spinner" />
+        style="@android:style/Widget.Holo.Spinner"
+        android:textColorHint="@color/hintTextColor" />
 
     <TextView
-        android:text="Where: "
+        android:text="@string/Where"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/where"
-        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
-        android:fontFamily="monospace"
+        android:fontFamily="sans-serif"
         android:layout_marginTop="50dp"
         android:layout_below="@+id/editDate"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/black" />
 
     <TextView
-        android:text="Which Class?"
+        android:text="@string/Class"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/whichClass"
-        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
-        android:fontFamily="monospace"
+        android:fontFamily="sans-serif"
         android:layout_below="@+id/editWhere"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/black" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:layout_marginTop="16dp"
         android:id="@+id/editClass"
-        android:hint="ie. CH100"
+        android:hint="@string/ClassHint"
         android:layout_below="@+id/whichClass"
-        android:layout_alignStart="@+id/editWhere" />
+        android:layout_alignStart="@+id/editWhere"
+        android:textColorHint="@color/hintTextColor" />
 
     <TextView
-        android:text="Studying Intensity"
+        android:text="@string/Intensity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/studyingIntensity"
-        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
-        android:fontFamily="monospace"
+        android:fontFamily="sans-serif"
         android:layout_below="@+id/editClass"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/black" />
 
     <TextView
-        android:text="Maximum People"
+        android:text="@string/MaxPeople"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/maxPeople"
-        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
-        android:fontFamily="monospace"
+        android:fontFamily="sans-serif"
         android:layout_below="@+id/ratingBar"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/black" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:layout_marginTop="13dp"
         android:id="@+id/editMaxPeople"
-        android:hint="3 - 8 people"
+        android:hint="@string/PeopleHint"
         android:layout_below="@+id/maxPeople"
-        android:layout_alignStart="@+id/editClass" />
-
-    <Button
-        android:text="Add Study Group"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/addEvent"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignStart="@+id/editClass"
+        android:textColorHint="@color/hintTextColor" />
 
     <RatingBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
         android:id="@+id/ratingBar"
         android:layout_below="@+id/studyingIntensity"
         android:layout_toEndOf="@+id/when" />
 
     <Button
         android:text="CANCEL"
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/cancel" />
+        android:id="@+id/cancel"
+        android:layout_marginLeft="10dp"
+        android:background="@color/buttonBackground" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:hint="At where?"
+        android:hint="@string/LocationHint"
         android:id="@+id/editWhere"
         android:layout_below="@+id/where"
-        android:layout_toEndOf="@+id/where" />
+        android:layout_toEndOf="@+id/where"
+        android:textColorHint="@color/hintTextColor" />
+
+    <Button
+        android:text="Add Study Group"
+        android:layout_height="wrap_content"
+        android:id="@+id/addEvent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_width="150dp"
+        android:background="@color/buttonBackground" />
 
 
 </RelativeLayout>

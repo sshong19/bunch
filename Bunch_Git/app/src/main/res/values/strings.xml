@@ -1,5 +1,25 @@
 <resources>
     <string name="app_name">"Bunch "</string>
     <string name="facebook_app_id">264497493953437</string>
+    <string name="register">Register</string>
+    <string name="PWhint">Enter your password</string>
+    <string name="EmailHint">Enter your email</string>
+    <string name="NameHint">First Name</string>
+    <string name="LNameHint">Last Name</string>
+    <string name="YearHint">Fresh, Soph, Junior, or Senior?</string>
+    <string name="MajorHint">Major</string>
+    <string name="CollegeHint">College</string>
+    <string name="Logout">Logout</string>
+    <string name="StudyGroupNew">Create a new study group</string>
+    <string name="Time">TIME</string>
+    <string name="LocationHint">Location</string>
+    <string name="ClassHint">i.e. MA123</string>
+    <string name="Class">Class:</string>
+    <string name="When">When:</string>
+    <string name="Where">Where:</string>
+    <string name="Intensity">Studying intensity:</string>
+    <string name="MaxPeople">Number of people:</string>
+    <string name="PeopleHint">3 to 8 people</string>
+
 
 </resources>
