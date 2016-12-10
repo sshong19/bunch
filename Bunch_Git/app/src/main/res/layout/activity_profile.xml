@@ -37,7 +37,8 @@
             android:layout_below ="@id/textViewUserEmail"
             android:layout_marginTop="25dp"
             android:typeface="normal"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/hintTextColor" />
 
         <EditText
             android:id="@+id/editLastName"
@@ -46,7 +47,8 @@
             android:hint="@string/LNameHint"
             android:layout_below = "@id/editFirstName"
             android:typeface="normal"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/hintTextColor" />
 
         <EditText
             android:id="@+id/editCollege"
@@ -55,7 +57,8 @@
             android:hint="@string/CollegeHint"
             android:layout_below = "@id/editCollege"
             android:typeface="normal"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/hintTextColor" />
 
         <EditText
             android:id="@+id/editMajor"
@@ -63,7 +66,8 @@
             android:layout_height="wrap_content"
             android:hint="@string/MajorHint"
             android:layout_below = "@id/editMajor"
-            android:typeface="normal" />
+            android:typeface="normal"
+            android:textColorHint="@color/hintTextColor" />
 
         <EditText
             android:id="@+id/editYear"
@@ -72,7 +76,8 @@
             android:hint="@string/YearHint"
             android:layout_below = "@id/editYear"
             android:typeface="normal"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/hintTextColor" />
 
         <Button
             android:id = "@+id/buttonSave"
@@ -87,7 +92,7 @@
 
 
         <Button
-            android:text="Logout"
+            android:text="@string/Logout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
