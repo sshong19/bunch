@@ -20,6 +20,7 @@
     <string name="Intensity">Studying intensity:</string>
     <string name="MaxPeople">Number of people:</string>
     <string name="PeopleHint">3 to 8 people</string>
+    <string name="DatePrompt">MM/DD/YY</string>
 
 
 </resources>

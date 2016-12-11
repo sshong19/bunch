@@ -10,7 +10,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.appsco.bunch.PostActivity_2">
 
-
     <TextView
         android:text="@string/StudyGroupNew"
         android:layout_width="wrap_content"
@@ -63,16 +62,7 @@
         android:layout_width="150dp"
         android:background="@color/buttonBackground" />
 
-    <TextView
-        android:text="Maximum People"
-        android:layout_width="wrap_content"
-        android:id="@+id/maxPeople"
-        android:fontFamily="sans-serif"
-        android:textColor="@android:color/black"
-        android:layout_alignBottom="@+id/ratingBar"
-        android:layout_alignStart="@+id/cancel"
-        android:layout_below="@+id/ratingBar"
-        android:layout_height="20dp" />
+
 
     <TextView
         android:text="@string/Intensity"
@@ -82,7 +72,8 @@
         android:fontFamily="sans-serif"
         android:textColor="@android:color/black"
         android:layout_centerVertical="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/editClass"/>
 
     <TextView
         android:text="@string/Where"
@@ -101,7 +92,7 @@
         android:id="@+id/editClass"
         android:hint="@string/ClassHint"
         android:textColorHint="@color/hintTextColor"
-        android:layout_above="@+id/studyingIntensity"
+        android:layout_below="@+id/whichClass"
         android:layout_alignStart="@+id/editMaxPeople" />
 
     <EditText
@@ -123,7 +114,8 @@
         android:ems="10"
         android:layout_marginTop="19dp"
         android:id="@+id/editDate"
-        android:hint="MM/DD/YY"
+        android:hint="@string/DatePrompt"
+        android:textColorHint="@color/hintTextColor"
         style="@android:style/Widget.Holo.Light.Spinner"
         android:layout_below="@+id/when"
         android:layout_alignStart="@+id/editTime" />
@@ -147,6 +139,19 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp" />
 
+    <TextView
+        android:text="@string/MaxPeople"
+        android:layout_width="wrap_content"
+        android:id="@+id/maxPeople"
+        android:fontFamily="sans-serif"
+        android:textColor="@android:color/black"
+        android:layout_alignStart="@+id/studyingIntensity"
+        android:layout_below="@+id/ratingBar"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:typeface="normal"
+        android:textAlignment="textStart" />
+
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -155,8 +160,8 @@
         android:id="@+id/editMaxPeople"
         android:hint="@string/PeopleHint"
         android:textColorHint="@color/hintTextColor"
-        android:layout_marginBottom="58dp"
-        android:layout_above="@+id/cancel"
+        android:layout_marginBottom="20dp"
+        android:layout_below="@+id/maxPeople"
         android:layout_alignStart="@+id/editLocation" />
 
 
