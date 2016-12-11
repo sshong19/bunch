@@ -6,79 +6,110 @@ package com.appsco.bunch;
 
 public class groupEvent {
 
-    private String firstName,lastName,studyClass,startDate,message,intensity,maxMembers;
+    private String username;
+
+    public String getCourse() {
+        return course;
+    }
+
+    public void setCourse(String course) {
+        this.course = course;
+    }
+
+    private String course;
+
+    public String getDate() {
+        return date;
+    }
+
+    private String date;
+    private String location;
+    private String time;
+    private String maximumppl;
+    private float intensity;
+
+    public String getMaximumppl() {
+        return maximumppl;
+    }
+
+    public void setMaximumppl(String maximumppl) {
+        this.maximumppl = maximumppl;
+    }
+
 
     public groupEvent(){
 
     }
 
-    public groupEvent(String firstName, String lastName, String studyClass, String startDate, String message, String intensity, String maxMembers) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.studyClass = studyClass;
-        this.startDate = startDate;
-        this.message = message;
+    public groupEvent(String username, String course, String date, float intensity, String maximumppl, String location, String time) {
+        this.course = course;
+        this.date = date;
+        this.course = course;
+        this.time= time;
         this.intensity = intensity;
-        this.maxMembers = maxMembers;
+        this.maximumppl = maximumppl;
+        this.location = location;
     }
 
 
+    public String getTime() {return time; }
+    public void setTime(String time) {this.time = time;}
 
     public String getFirstName() {
-        return firstName;
+        return username;
     }
 
     public void setFirstName(String firstName) {
-        this.firstName = firstName;
+        this.username = firstName;
     }
 
-
-    public String getLastName() {
-        return lastName;
+    public String getLocation() {
+        return location;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLocation(String location) {
+        this.location = location;
     }
 
-    public String getStudyClass() {
-        return studyClass;
-    }
+//    public String getLastName() {
+//        return lastName;
+//    }
+//
+//    public void setLastName(String lastName) {
+//        this.lastName = lastName;
+//    }
 
-    public void setStudyClass(String studyClass) {
-        this.studyClass = studyClass;
-    }
+//    public String getStudyClass() {
+//        return course;
+//    }
+//
+//    public void setStudyClass(String studyClass) {
+//        this.course = studyClass;
+//    }
 
     public String getStartDate() {
-        return startDate;
+        return date;
     }
 
     public void setStartDate(String startDate) {
-        this.startDate = startDate;
+        this.date = startDate;
     }
 
-    public String getMessage() {
-        return message;
-    }
 
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    public String getIntensity() {
+    public float getIntensity() {
         return intensity;
     }
 
-    public void setIntensity(String intensity) {
+    public void setIntensity(float intensity) {
         this.intensity = intensity;
     }
 
     public String getMaxMembers() {
-        return maxMembers;
+        return maximumppl;
     }
 
     public void setMaxMembers(String maxMembers) {
-        this.maxMembers = maxMembers;
+        this.maximumppl = maxMembers;
     }
 
 

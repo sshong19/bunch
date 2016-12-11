@@ -37,11 +37,12 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             startActivity(new Intent(this,LoginActivity.class));
         }
 
+
         FirebaseUser user = firebaseAuth.getCurrentUser();
 
-//        if (databaseReference.child("Users").child(user.getUid()).child("Profile") != null){
+//        if (){
 //            finish();
-//            startActivity(new Intent(this,UserThread.class));
+//            startActivity(new Intent(this,PostActivity_2.class));
 //        }
 
         textViewUserEmail = (TextView) findViewById(R.id.textViewUserEmail);
@@ -97,7 +98,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         if (v == buttonSave){
             saveUserInformation();
 //            finish();
-//            startActivity(new Intent(this,PostActivity.class));
+            startActivity(new Intent(getApplicationContext(),NewsFeedActivity.class));
 //            startActivity(new Intent(this,ProfileThread.class));
 
         }

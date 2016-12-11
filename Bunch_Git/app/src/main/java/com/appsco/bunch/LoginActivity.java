@@ -48,6 +48,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         buttonSignin.setOnClickListener(this);
         textViewSignup.setOnClickListener(this);
     }
+
     private void userLogin(){
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
@@ -79,7 +80,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         progressDialog.dismiss();
-
                         if(task.isSuccessful()){
                             //start the profile activity
                             finish();

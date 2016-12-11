@@ -4,95 +4,86 @@
     android:layout_width="match_parent" android:layout_height="wrap_content"
     android:layout_margin = "20dp">
 
-    <GridLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="238dp"
-        android:orientation="horizontal"
-        android:columnOrderPreserved="true"
-        android:columnCount="3"
-        android:rowCount="2">
+        android:layout_height="229dp">
 
+        <TextView
+            android:text="Created By"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/username"
+            android:layout_marginStart="13dp"
+            android:layout_above="@+id/join"
+            android:layout_alignStart="@+id/course" />
 
-        <FrameLayout
-            android:layout_width="96dp"
-            android:layout_height="86dp"
-            >
+        <TextView
+            android:text="Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/time"
+            android:layout_below="@+id/date"
+            android:layout_alignEnd="@+id/date" />
 
-            <TextView
-                android:text="Name"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:id="@+id/name"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="5dp" />
+        <TextView
+            android:text="Location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:id="@+id/location"
+            android:textSize="20sp"
+            android:layout_below="@+id/time"
+            android:layout_alignStart="@+id/username" />
 
-        </FrameLayout>
+        <Button
+            android:text="Join"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="11dp"
+            android:id="@+id/join"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
 
-        <FrameLayout
-            android:layout_width="92dp"
-            android:layout_height="96dp">
+        <TextView
+            android:text="Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:id="@+id/date"
+            android:textSize="20sp"
+            android:layout_below="@+id/course"
+            android:layout_alignStart="@+id/location" />
 
-            <TextView
-                android:text="Courses"
-                android:layout_width="match_parent"
-                android:id="@+id/course"
-                android:layout_height="40dp"
-                android:layout_marginTop="20dp" />
+        <TextView
+            android:text="Course"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/course"
+            android:textSize="30sp"
+            android:layout_marginTop="19dp"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/join"
+            android:layout_marginEnd="11dp" />
 
-        </FrameLayout>
+        <TextView
+            android:text="Maximum People"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/maxpeople"
+            android:textSize="18sp"
+            android:layout_marginEnd="27dp"
+            android:layout_alignBottom="@+id/location"
+            android:layout_alignParentEnd="true" />
 
-        <FrameLayout
-            android:layout_width="116dp"
-            android:layout_height="78dp"
-            >
+        <TextView
+            android:text="Intensity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/intensity"
+            android:textSize="20sp"
+            android:layout_alignBaseline="@+id/date"
+            android:layout_alignBottom="@+id/date"
+            android:layout_alignStart="@+id/maxpeople" />
 
-            <TextView
-                android:text="Date"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/date"
-                android:layout_marginTop="20dp" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="95dp"
-            android:layout_height="81dp">
-
-            <TextView
-                android:text="Intensity"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/intensity"
-                android:layout_marginLeft="5dp" />
-
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="91dp"
-            android:layout_height="82dp"
-            android:layout_row="1"
-            android:layout_column="1">
-
-            <TextView
-                android:text="Max_People"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/max_people" />
-        </FrameLayout>
-
-        <FrameLayout
-            android:layout_width="139dp"
-            android:layout_height="97dp">
-
-            <TextView
-                android:text="Message"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/message" />
-
-        </FrameLayout>
-
-
-    </GridLayout>
-
+    </RelativeLayout>
 </android.support.v7.widget.CardView>
