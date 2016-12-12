@@ -81,7 +81,7 @@ public class PostActivity_2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startPosting();
-                startActivity(new Intent(getApplicationContext(),NewsFeedActivity.class));
+                startActivity(new Intent(PostActivity_2.this,NewsFeedActivity.class));
             }
         });
     }

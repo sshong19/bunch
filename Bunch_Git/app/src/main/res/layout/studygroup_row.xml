@@ -31,16 +31,6 @@
         <!--android:layout_toStartOf="@+id/join"-->
 
         <TextView
-            android:text="Maximum People"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/maxpeople"
-            android:textSize="18sp"
-            android:layout_marginEnd="27dp"
-            android:layout_alignBottom="@+id/location"
-            android:layout_alignParentEnd="true" />
-
-        <TextView
             android:text="Date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -62,6 +52,16 @@
             android:layout_alignStart="@+id/date" />
 
         <TextView
+            android:text="Course"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/course"
+            android:textSize="30sp"
+            android:layout_marginTop="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
             android:text="Intensity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -72,14 +72,14 @@
             android:layout_alignStart="@+id/maxpeople" />
 
         <TextView
-            android:text="Course"
+            android:text="Maximum People"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/course"
-            android:textSize="30sp"
-            android:layout_marginTop="40dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
+            android:id="@+id/maxpeople"
+            android:textSize="18sp"
+            android:layout_alignBottom="@+id/location"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="15dp" />
 
     </RelativeLayout>
 </android.support.v7.widget.CardView>

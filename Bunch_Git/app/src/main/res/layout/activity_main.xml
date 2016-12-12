@@ -60,7 +60,6 @@
             tools:textStyle="normal" />
 
 
-
         <Button
             android:id = "@+id/buttonRegister"
             android:text = "@string/register"

@@ -14,6 +14,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -23,6 +25,8 @@ public class NewsFeedActivity extends AppCompatActivity{
     private RecyclerView mStudyGroupList;
     private DatabaseReference mDatabase;
     private Button studygroup_post;
+    private Button logout;
+
     // public Button join;
 
     @Override
@@ -36,6 +40,7 @@ public class NewsFeedActivity extends AppCompatActivity{
         mStudyGroupList.setHasFixedSize(true);
         mStudyGroupList.setLayoutManager(new LinearLayoutManager(this));
         studygroup_post = (Button) findViewById(R.id.action_add);
+        logout = (Button) findViewById(R.id.logout);
 
 //        join  = (Button) findViewById(R.id.join);
 //
@@ -45,13 +50,19 @@ public class NewsFeedActivity extends AppCompatActivity{
 //                startActivity(new Intent(NewsFeedActivity.this,PostActivity_2.class));
 //            }
 //        });
-
-
         studygroup_post.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
                 startActivity(new Intent(getApplicationContext(),PostActivity_2.class));
+            }
+        });
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+                startActivity(new Intent(getApplicationContext(),MainActivity.class));
             }
         });
 
@@ -81,7 +92,7 @@ public class NewsFeedActivity extends AppCompatActivity{
                 viewHolder.setLocation(model.getLocation());
                 viewHolder.setCourse(model.getCourse());
                 viewHolder.setIntensity("Intensity: " + sIntensity);
-                viewHolder.setMaxMember("Maximum People: " + model.getMaximumppl());
+                viewHolder.setMaxMember("Max People: " + model.getMaximumppl());
                 viewHolder.setTime(model.getTime());
 
             }

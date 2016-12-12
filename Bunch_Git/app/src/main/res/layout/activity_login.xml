@@ -13,16 +13,6 @@
     android:backgroundTintMode="screen">
 
 
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/bunchlogo"
-        android:id="@+id/imageView"
-        android:layout_marginTop="50dp"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
-        />
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -37,25 +27,37 @@
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="match_parent"
-        android:layout_marginTop="14dp"
-        android:layout_below="@+id/imageView"
+        android:layout_marginTop="79dp"
+        android:layout_below="@+id/imageView2"
         android:layout_alignParentStart="true">
 
         <EditText
             android:inputType="textEmailAddress"
-            android:hint="Enter your email"
-            android:id = "@+id/editTextEmail"
+            android:hint="@string/EmailHint"
+            android:id="@+id/editTextEmail"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            style="@android:style/Widget.Material.Light.EditText"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:background="@android:drawable/edit_text"
+            tools:typeface="normal"
+            android:typeface="normal" />
+
 
         <EditText
-            android:inputType = "textPassword"
-            android:hint="Enter your password"
-            android:id = "@+id/editTextPassWord"
+            android:inputType="textPassword"
+            android:hint="@string/PWhint"
+            android:id="@+id/editTextPassWord"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-
-
+            android:layout_height="wrap_content"
+            style="@android:style/Widget.Material.Light.EditText"
+            android:textAlignment="center"
+            android:background="@android:drawable/edit_text"
+            android:textColor="@android:color/black"
+            tools:typeface="normal"
+            android:typeface="normal"
+            tools:textStyle="normal" />
 
         <Button
             android:id = "@+id/buttonSignin"
@@ -80,6 +82,14 @@
             android:layout_height="wrap_content" />
 
     </LinearLayout>
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/bunchlogo"
+        android:id="@+id/imageView2"
+        android:layout_alignTop="@+id/textView"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>
