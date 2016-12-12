@@ -82,6 +82,7 @@
             android:layout_marginTop="10dp"
             android:textAlignment="center"
             android:text="Already Registerd? Sign in here"
+            android:clickable="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:typeface="sans" />
