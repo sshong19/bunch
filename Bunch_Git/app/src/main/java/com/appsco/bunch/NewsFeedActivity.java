@@ -79,7 +79,7 @@ public class NewsFeedActivity extends AppCompatActivity{
                 viewHolder.setLocation(model.getLocation());
                 viewHolder.setCourse(model.getCourse());
                 viewHolder.setIntensity(model.getIntensity());
-                viewHolder.setMaxMember(model.getMaximumppl());
+                viewHolder.setMaxMember("Maximum People :" + model.getMaximumppl());
                 viewHolder.setTime(model.getTime());
 
             }

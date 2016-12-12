@@ -47,11 +47,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         firebaseAuth = FirebaseAuth.getInstance();
 
         //if the user is already registered the user would be directed to profile activity
-        if (firebaseAuth.getCurrentUser() != null){
-            //profile activity here
-            finish();
-            startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
-        }
+//        if (firebaseAuth.getCurrentUser() != null){
+//            //profile activity here
+//            finish();
+//            startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+//        }
 
         progressDialog = new ProgressDialog(this);
 //        loginButton = (LoginButton)findViewById(R.id.fb_login_bn);
@@ -147,7 +147,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         if (v == buttonRegister){
             registerUser();
-            finish();
             startActivity(new Intent(this,ProfileActivity.class));
         }
         if (v == textViewSignin){

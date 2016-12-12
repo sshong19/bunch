@@ -46,7 +46,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 //        }
 
         textViewUserEmail = (TextView) findViewById(R.id.textViewUserEmail);
-        textViewUserEmail.setText("Welcome "+ user.getEmail());
+        textViewUserEmail.setText("Welcome " + user.getEmail());
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
 
@@ -97,7 +97,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         }
         if (v == buttonSave){
             saveUserInformation();
-//            finish();
+            finish();
             startActivity(new Intent(getApplicationContext(),NewsFeedActivity.class));
 //            startActivity(new Intent(this,ProfileThread.class));
 
