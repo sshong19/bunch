@@ -147,7 +147,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         if (v == buttonRegister){
             registerUser();
-            startActivity(new Intent(this,ProfileActivity.class));
+            // startActivity(new Intent(this,ProfileActivity.class));
         }
         if (v == textViewSignin){
          //Signin

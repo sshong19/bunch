@@ -11,7 +11,7 @@
     tools:context="com.appsco.bunch.NewsFeedActivity">
 
     <Button
-        android:text="addevent"
+        android:text="Add Event"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/action_add"

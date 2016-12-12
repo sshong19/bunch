@@ -8,14 +8,8 @@
         android:layout_width="match_parent"
         android:layout_height="229dp">
 
-        <TextView
-            android:text="Created By"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/username"
-            android:layout_marginStart="13dp"
-            android:layout_above="@+id/join"
-            android:layout_alignStart="@+id/course" />
+        <!--android:layout_above="@+id/join"-->
+
 
         <TextView
             android:text="Time"
@@ -25,45 +19,16 @@
             android:layout_below="@+id/date"
             android:layout_alignEnd="@+id/date" />
 
-        <TextView
-            android:text="Location"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:id="@+id/location"
-            android:textSize="20sp"
-            android:layout_below="@+id/time"
-            android:layout_alignStart="@+id/username" />
+        <!--<Button-->
+            <!--android:text="Join"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="11dp"-->
+            <!--android:id="@+id/join"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_centerHorizontal="true" />-->
 
-        <Button
-            android:text="Join"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="11dp"
-            android:id="@+id/join"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true" />
-
-        <TextView
-            android:text="Date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="11dp"
-            android:id="@+id/date"
-            android:textSize="20sp"
-            android:layout_below="@+id/course"
-            android:layout_alignStart="@+id/location" />
-
-        <TextView
-            android:text="Course"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/course"
-            android:textSize="30sp"
-            android:layout_marginTop="19dp"
-            android:layout_alignParentTop="true"
-            android:layout_toStartOf="@+id/join"
-            android:layout_marginEnd="11dp" />
+        <!--android:layout_toStartOf="@+id/join"-->
 
         <TextView
             android:text="Maximum People"
@@ -76,6 +41,27 @@
             android:layout_alignParentEnd="true" />
 
         <TextView
+            android:text="Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:id="@+id/date"
+            android:textSize="20sp"
+            android:layout_below="@+id/course"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="23dp" />
+
+        <TextView
+            android:text="Location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:id="@+id/location"
+            android:textSize="20sp"
+            android:layout_below="@+id/time"
+            android:layout_alignStart="@+id/date" />
+
+        <TextView
             android:text="Intensity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -84,6 +70,16 @@
             android:layout_alignBaseline="@+id/date"
             android:layout_alignBottom="@+id/date"
             android:layout_alignStart="@+id/maxpeople" />
+
+        <TextView
+            android:text="Course"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/course"
+            android:textSize="30sp"
+            android:layout_marginTop="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
 
     </RelativeLayout>
 </android.support.v7.widget.CardView>

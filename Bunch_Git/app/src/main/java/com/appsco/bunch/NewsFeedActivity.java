@@ -23,7 +23,7 @@ public class NewsFeedActivity extends AppCompatActivity{
     private RecyclerView mStudyGroupList;
     private DatabaseReference mDatabase;
     private Button studygroup_post;
-    public Button join;
+    // public Button join;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,13 +73,15 @@ public class NewsFeedActivity extends AppCompatActivity{
 
             @Override
             protected void populateViewHolder(GroupViewHolder viewHolder, groupEvent model, int position) {
+                float intensity = model.getIntensity();
+                String sIntensity = String.valueOf(intensity);
 
-                viewHolder.setName(model.getFirstName());
+                //viewHolder.setName(model.getFirstName());
                 viewHolder.setDate(model.getDate());
                 viewHolder.setLocation(model.getLocation());
                 viewHolder.setCourse(model.getCourse());
-                viewHolder.setIntensity(model.getIntensity());
-                viewHolder.setMaxMember("Maximum People :" + model.getMaximumppl());
+                viewHolder.setIntensity("Intensity: " + sIntensity);
+                viewHolder.setMaxMember("Maximum People: " + model.getMaximumppl());
                 viewHolder.setTime(model.getTime());
 
             }
@@ -96,10 +98,10 @@ public class NewsFeedActivity extends AppCompatActivity{
             super(itemView);
             mView = itemView;
         }
-        public void setName(String name){
+       /* public void setName(String name){
             TextView userName = (TextView) mView.findViewById(R.id.username);
             userName.setText(name);
-        }
+        }*/
 
         public void setCourse(String course){
             TextView userCourse = (TextView) mView.findViewById(R.id.course);
@@ -115,7 +117,7 @@ public class NewsFeedActivity extends AppCompatActivity{
             TextView userTime = (TextView) mView.findViewById(R.id.time);
             userTime.setText(time);
         }
-        public void setIntensity(float intensity){
+        public void setIntensity(String intensity){
             TextView userIntensity = (TextView) mView.findViewById(R.id.intensity);
             String myIntensity = String.valueOf(intensity);
             userIntensity.setText(myIntensity);
