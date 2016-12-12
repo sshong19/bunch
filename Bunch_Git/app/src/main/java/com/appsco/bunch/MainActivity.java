@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        FacebookSdk.sdkInitialize(getApplicationContext());
+        FirebaseApp.initializeApp(this);
         setContentView(R.layout.activity_main);
         firebaseAuth = FirebaseAuth.getInstance();
 
